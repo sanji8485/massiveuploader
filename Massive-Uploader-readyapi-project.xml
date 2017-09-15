@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8f217beb-b107-44f9-9498-235c1c59c2f9" created="2.1.0" activeEnvironment="Default environment" name="Massive Uploader" resourceRoot="" updated="2.1.0 20170726-1100" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5e291469-44d7-4df7-80e4-d68be2cfc62b" wsaVersion="NONE" name="CreateDevicePreloadedImplServiceSoapBinding" type="wsdl" bindingName="{http://ws.ctd.com/service}CreateDevicePreloadedImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="41dbbbad-8008-4f7d-ba1a-772da33b4f7afileName">CreateDevicePreloadedImplServiceSoapBinding</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl"><con:part><con:url>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CreateDevicePreloadedImplService" targetNamespace="http://ws.ctd.com/service" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.ctd.com/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.ctd.com/service" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://ws.ctd.com/exception" xmlns:ns1="http://ws.ctd.com/entity">
+      <xs:import namespace="http://ws.ctd.com/entity"/>
+      <xs:import namespace="http://ws.ctd.com/exception"/>
+      <xs:element name="action" type="tns:action"/>
+      <xs:element name="actionResponse" type="tns:actionResponse"/>
+      <xs:complexType name="action">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="loginInfo" type="ns1:LoginInfo"/>
+          <xs:element minOccurs="0" name="dpInfo" type="ns1:DevicePreloadedInfo"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="actionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="ns1:WSResult"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="http://ws.ctd.com/exception" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.ctd.com/exception">
+      <xs:complexType name="WSErrors">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" type="xs:string"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="subErrors" nillable="true" type="tns:SubError"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SubError">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" type="xs:string"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="property" type="xs:string"/>
+          <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.ctd.com/entity" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.ctd.com/entity" xmlns:ns1="http://ws.ctd.com/exception">
+      <xs:import namespace="http://ws.ctd.com/exception"/>
+      <xs:complexType name="LoginInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="login" type="xs:string"/>
+          <xs:element minOccurs="0" name="passwd" type="xs:string"/>
+          <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DevicePreloadedInfo">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="params" nillable="true" type="tns:NameValuePair"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="NameValuePair">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="WSResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+          <xs:element minOccurs="0" name="wsErrors" type="ns1:WSErrors"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="actionResponse">
+    <wsdl:part element="tns:actionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="action">
+    <wsdl:part element="tns:action" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CreateDevicePreloaded">
+    <wsdl:operation name="action">
+      <wsdl:input message="tns:action" name="action"></wsdl:input>
+      <wsdl:output message="tns:actionResponse" name="actionResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CreateDevicePreloadedImplServiceSoapBinding" type="tns:CreateDevicePreloaded">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="action">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="action">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="actionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CreateDevicePreloadedImplService">
+    <wsdl:port binding="tns:CreateDevicePreloadedImplServiceSoapBinding" name="CreateDevicePreloadedImplPort">
+      <soap:address location="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:endpoint>https://mip.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint></con:endpoints><con:operation id="3e7fce91-b626-4c40-bf61-0bf4cb011d00" isOneWay="false" action="" name="action" bindingOperationName="action" type="Request-Response" outputName="actionResponse" inputName="action" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings><con:setting id="b4ca5f31-42f7-4aae-ab83-3e5658b43e05fileName">action</con:setting></con:settings><con:call id="1a77dfb6-6b6b-4550-901a-ab0f1cdbac41" name="Infiniti_Device"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:action>
+         <!--Optional:-->
+         <loginInfo>
+            <appCode>WEB_SERVICES</appCode>
+            <!--Optional:-->
+            <login>webservices</login>
+            <!--Optional:-->
+            <passwd>level2</passwd>
+         </loginInfo>
+         <!--Optional:-->
+         <dpInfo>
+            <!--Zero or more repetitions:-->
+            <params>
+               <name>PRODUCT_TYPE_CODE</name>
+               <value>WIRELESS_CAR</value>
+            </params>
+            <params>
+               <name>SERIAL_NUMBER</name>
+               <value>INFINITI_JN1GCAV37U0400002</value>
+            </params>
+            <params>
+               <name>PRODUCT_CODE</name>
+               <value>INFINITI </value>
+            </params>
+            <params>
+               <name>FIRMWARE_RELEASE</name>
+               <value>1</value>
+            </params>
+            <params>
+               <name>PRODUCTION_DATE</name>
+               <value>2016-06-08</value>
+            </params>
+         </dpInfo>
+      </ser:action>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="56f5cde7-39d5-4ed6-8c40-253bf2c40465" name="PAV_cGW"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mip.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:action>
+         <!--Optional:-->
+         <loginInfo>
+            <appCode>WEB_SERVICES</appCode>
+            <login>ws_ds</login>
+            <passwd>pIkvXmCF04rX</passwd>
+         </loginInfo>
+         <!--Optional:-->
+         <dpInfo>
+            <!--Zero or more repetitions:-->
+            <params>
+               <name>PRODUCT_TYPE_CODE</name>
+               <value>PAV_MBB</value>
+            </params>
+            <params>
+               <name>SERIAL_NUMBER</name><value>PAV_USA_01</value>
+               
+            </params>
+            <params>
+               <name>PRODUCT_CODE</name>
+               <value>PAV_CGW</value>
+            </params>
+            <params>
+               <name>FIRMWARE_RELEASE</name>
+               <value>1</value>
+            </params>
+         </dpInfo>
+      </ser:action>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="8a7e64c7-4d4c-4ec1-a168-a83efb098e0d" name="MCD3X"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:action>
+         <!--Optional:-->
+         <loginInfo>
+            <appCode>WEB_SERVICES</appCode>
+            <!--Optional:-->
+            <login>webservices</login>
+            <!--Optional:-->
+            <passwd>level2</passwd>
+         </loginInfo>
+         <!--Optional:-->
+         <dpInfo>
+            <!--Zero or more repetitions:-->
+            <params>
+               <name>PRODUCT_TYPE_CODE</name>
+               <value>COBRA_MCD3X</value>
+            </params>
+            <params>
+               <name>SERIAL_NUMBER</name><value>VIRT_MCD3X_001</value>
+               
+            </params>
+            <params>
+               <name>PRODUCT_CODE</name>
+               <value>2433</value>
+            </params>
+            <params>
+               <name>FIRMWARE_RELEASE</name>
+               <value>0.05</value>
+            </params>
+            <params>
+               <name>PRODUCTION_DATE</name>
+               <value>2016-06-07</value>
+            </params>
+         </dpInfo>
+      </ser:action>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="270cbb55-6c96-4690-b55f-1d2e405b629e" name="AVACAR"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:action>
+         <!--Optional:-->
+         <loginInfo>
+            <appCode>WEB_SERVICES</appCode>
+            <login>ws_ds</login>
+            <passwd>pIkvXmCF04rX</passwd>
+         </loginInfo>
+         <!--Optional:-->
+         <dpInfo>
+            <!--Zero or more repetitions:-->
+            <params>
+               <name>PRODUCT_TYPE_CODE</name>
+               <value>VW_AVACAR</value>
+           </params>
+            <params>
+               <name>SERIAL_NUMBER</name>
+               <value>AVACAR_TEST_ID87415240</value>
+            </params>
+            <params>
+               <name>PRODUCT_CODE</name>
+               <value>AVACAR_OBD</value>
+            </params>
+            <params>
+               <name>FIRMWARE_RELEASE</name>
+               <value>1</value>
+            </params>
+         </dpInfo>
+      </ser:action>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call><con:call id="ab735d13-5e04-4d2a-ac55-fda59a1d1098" name="AVAcar_debug"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:action>
+         <!--Optional:-->
+         <loginInfo>
+            <appCode>WEB_SERVICES</appCode>
+            <!--Optional:-->
+            <login>webservices</login>
+            <!--Optional:-->
+            <passwd>level2</passwd>
+         </loginInfo>
+         <!--Optional:-->
+         <dpInfo>
+            <!--Zero or more repetitions:-->
+            <params>
+               <name>PRODUCT_TYPE_CODE</name><value>VW_AVACAR</value>
+               
+            </params>
+            <params>
+               <name>SERIAL_NUMBER</name><value>AVACAR_TEST_ID81702736</value>
+               
+            </params>
+            <params>
+               <name>PRODUCT_CODE</name><value>AVACAR_OBD</value>
+               
+            </params>
+            <params>
+               <name>FIRMWARE_RELEASE</name>
+               <value>1</value>
+            </params>
+            <params>
+               <name>PRODUCTION_DATE</name>
+               <value>2016-06-08</value>
+            </params>
+         </dpInfo>
+      </ser:action>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:RestService" id="c461accd-7212-4c85-b6be-1282df04668d" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://maker.ifttt.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://maker.ifttt.com</con:endpoint></con:endpoints><con:resource name="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" path="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" id="cdfba31e-cfa3-4e54-b722-381ec530820e"><con:settings/><con:parameters><con:parameter><con:name>event</con:name><con:value>event</con:value><con:style>TEMPLATE</con:style><con:default>event</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" id="b09313e5-1112-4531-8b4b-e874020c95f2" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="6a19ff69-014f-4090-891f-f5787a26f771" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"TEST38EP1VGHR4W1J,BE,fr_FR,OK","value2":"test","value3":"test"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="endtest" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="7c684c2f-9f93-435e-bc8b-b9c772f3496b" name="TestSuite 1"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="ddbf5e1f-3891-444d-a976-4346944e0bc0" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="groovy" name="Groovy Script" id="fe76827f-3c1f-4645-9f19-70fa9e7b7a47"><con:settings/><con:config><script>def start = context.expand('${#TestCase#Start}').toInteger()
+def end = context.expand('${#TestCase#End}').toInteger()
+
+
+if (start > end) {
+	testRunner.cancel("Start is greater than End")
+	return
+}
+
+while (start &lt;= end) {
+
+	log.info(start.toString().padLeft(5,'0'))
+	testRunner.testCase.setPropertyValue( "Value", start.toString().padLeft(5,'0') )
+	testRunner.runTestStepByName( "action - MCD3X")
+	start++
+}
+
+log.info ("Upload Finished")
+</script></con:config></con:testStep><con:testStep type="request" id="17489cdb-6e20-4232-ab8f-a0007a9547d7" name="action - MCD3X" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CreateDevicePreloadedImplServiceSoapBinding</con:interface><con:operation>action</con:operation><con:request name="action - MCD3X" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="64d91661-ecef-4ff3-98d0-c7874bc9e702"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://mip.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:action>
+         <!--Optional:-->
+         <loginInfo>
+            <appCode>WEB_SERVICES</appCode>
+            <!--Optional:-->
+            <login>webservices</login>
+            <!--Optional:-->
+            <passwd>level2</passwd>
+         </loginInfo>
+         <!--Optional:-->
+         <dpInfo>
+            <!--Zero or more repetitions:-->
+            <params><name>AUTHENTICATION_KEY</name><value>WPbPceS7baBPC6Z3GNSEA9w0CVGrT14/w/8FvrtzP94M64r7ggg8OjFqZrqc+KXZSJyNFHG7UQXyEBrmoY3BQXjQ/0839ntusHm7hrpalce6PkjxR4bT4cstXspaabOsernpHndoPBJYlR8rxzPYq7eP+eiaU8e1qiieRYgE2Uax576AsdUiRvpS9RqS9gxHhqgWjqz0yNOEj1oXoVReswwuU90Fxq2bd2U4+aeAcqnDxQV3+vIJzErVm5/G0UvUVkOGgB2Ie0+e5+jShW8iK+zI3L7s1pSmN2BJxoHA897WwDDuwkl3xXr+dMDfgew85kHJWZyg/s77V6JSxLqOONjaKIbURJBw4m4a33im3bkGGIAvRFAfWYH/VnyO4pJrQxOF+ZnAiInawcIRJQcD8DC8xC85qOUPDZO9Gq9aPwAXhewIgnGwSaHhApylYxJH+bbL073ssLbiFum9VbN5lKQqq6Ot1wOM3SXN2EU5kqQiqd+aoiDuAP/K43xxMd+E</value></params><params><name>FACTORY_PROFILE_ID</name><value>70003011</value></params><params><name>SIM_CARD_ID</name><value>893910410000000${#TestCase#Value}</value></params><params><name>IMSI</name><value>2229000000${#TestCase#Value}</value></params><params><name>CALL_NUMBER</name><value>+3900${#TestCase#Value}</value></params><params><name>IMEI</name><value>0000000000${#TestCase#Value}</value></params><params>
+               <name>PRODUCT_TYPE_CODE</name>
+               <value>${#TestCase#Product}</value>
+            </params>
+            <params>
+               <name>SERIAL_NUMBER</name>
+               <value>${#TestCase#Value}VIRTUA</value>
+            </params>
+            <params>
+               <name>PRODUCT_CODE</name>
+               <value>2431</value>
+            </params>
+            <params>
+               <name>FIRMWARE_RELEASE</name>
+               <value>0.05</value>
+            </params>
+            <params>
+               <name>PRODUCTION_DATE</name>
+               <value>2016-06-07</value>
+            </params>
+         </dpInfo>
+      </ser:action>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3e0aa2ea-e8f5-41a4-b00d-e1da11a3ee9d" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="restrequest" name="End_Mail" id="52afedff-2d72-408c-a221-770dbd3d21d1"><con:settings/><con:config service="https://maker.ifttt.com" resourcePath="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" methodName="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Copy of End_Mail" id="291759a1-5317-46e1-8abb-1b425c8d3916" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"${#TestCase#Product}","value2":"${#TestCase#Start}","value3":"${#TestCase#End}"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="massiveupload" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>Start</con:name><con:value>99</con:value></con:property><con:property><con:name>End</con:name><con:value>101</con:value></con:property><con:property><con:name>Value</con:name><con:value>00101</con:value></con:property><con:property><con:name>Product</con:name><con:value>COBRA_MCD3X</con:value></con:property></con:properties><con:reportParameters/></con:testCase><con:properties><con:property><con:name>Start</con:name><con:value>99</con:value></con:property><con:property><con:name>End</con:name><con:value>101</con:value></con:property></con:properties><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:tags/></con:soapui-project>
