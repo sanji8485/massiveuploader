@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="8f217beb-b107-44f9-9498-235c1c59c2f9" created="2.1.0" activeEnvironment="Default environment" name="Massive Uploader" resourceRoot="" updated="2.1.0 20170726-1100" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5e291469-44d7-4df7-80e4-d68be2cfc62b" wsaVersion="NONE" name="CreateDevicePreloadedImplServiceSoapBinding" type="wsdl" bindingName="{http://ws.ctd.com/service}CreateDevicePreloadedImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="41dbbbad-8008-4f7d-ba1a-772da33b4f7afileName">CreateDevicePreloadedImplServiceSoapBinding</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl"><con:part><con:url>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CreateDevicePreloadedImplService" targetNamespace="http://ws.ctd.com/service" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.ctd.com/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+<con:soapui-project id="8f217beb-b107-44f9-9498-235c1c59c2f9" created="2.1.0" activeEnvironment="Default environment" name="Massive Uploader" resourceRoot="" updated="2.1.0 20170726-1100" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="5e291469-44d7-4df7-80e4-d68be2cfc62b" wsaVersion="NONE" name="CreateDevicePreloadedImplServiceSoapBinding" type="wsdl" bindingName="{http://ws.ctd.com/service}CreateDevicePreloadedImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="41dbbbad-8008-4f7d-ba1a-772da33b4f7afileName">CreateDevicePreloadedImplServiceSoapBinding</con:setting></con:settings><con:definitionCache type="TEXT" rootPart="https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl"><con:part><con:url>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="CreateDevicePreloadedImplService" targetNamespace="http://ws.ctd.com/service" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.ctd.com/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
   <wsdl:types>
     <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://ws.ctd.com/service" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://ws.ctd.com/exception" xmlns:ns1="http://ws.ctd.com/entity">
       <xs:import namespace="http://ws.ctd.com/entity"/>
@@ -271,8 +271,44 @@
          </dpInfo>
       </ser:action>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:RestService" id="c461accd-7212-4c85-b6be-1282df04668d" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://maker.ifttt.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://maker.ifttt.com</con:endpoint></con:endpoints><con:resource name="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" path="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" id="cdfba31e-cfa3-4e54-b722-381ec530820e"><con:settings/><con:parameters><con:parameter><con:name>event</con:name><con:value>event</con:value><con:style>TEMPLATE</con:style><con:default>event</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" id="b09313e5-1112-4531-8b4b-e874020c95f2" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="6a19ff69-014f-4090-891f-f5787a26f771" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"TEST38EP1VGHR4W1J,BE,fr_FR,OK","value2":"test","value3":"test"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="endtest" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="7c684c2f-9f93-435e-bc8b-b9c772f3496b" name="TestSuite 1"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="ddbf5e1f-3891-444d-a976-4346944e0bc0" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Uploader" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Warning_Mail" id="52afedff-2d72-408c-a221-770dbd3d21d1"><con:settings/><con:config service="https://maker.ifttt.com" resourcePath="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" methodName="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Warning_Mail" id="291759a1-5317-46e1-8abb-1b425c8d3916" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"${#TestCase#Product}","value2":"${#TestCase#Start}","value3":"${#TestCase#End}"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="massiveupload" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="fe76827f-3c1f-4645-9f19-70fa9e7b7a47"><con:settings/><con:config><script>def start = context.expand('${#TestCase#Start}').toInteger()
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:RestService" id="c461accd-7212-4c85-b6be-1282df04668d" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://maker.ifttt.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://maker.ifttt.com</con:endpoint></con:endpoints><con:resource name="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" path="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" id="cdfba31e-cfa3-4e54-b722-381ec530820e"><con:settings/><con:parameters><con:parameter><con:name>event</con:name><con:value>event</con:value><con:style>TEMPLATE</con:style><con:default>event</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" id="b09313e5-1112-4531-8b4b-e874020c95f2" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="6a19ff69-014f-4090-891f-f5787a26f771" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"TEST38EP1VGHR4W1J,BE,fr_FR,OK","value2":"test","value3":"test"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="endtest" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="7c684c2f-9f93-435e-bc8b-b9c772f3496b" name="TestSuite 1"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="ddbf5e1f-3891-444d-a976-4346944e0bc0" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Uploader" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Warning_Mail" id="52afedff-2d72-408c-a221-770dbd3d21d1"><con:settings/><con:config service="https://maker.ifttt.com" resourcePath="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" methodName="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Warning_Mail" id="291759a1-5317-46e1-8abb-1b425c8d3916" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"${#TestCase#Product_Type}","value2":"${#TestCase#Start}","value3":"${#TestCase#End}"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="massiveupload" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="fe76827f-3c1f-4645-9f19-70fa9e7b7a47"><con:settings/><con:config><script>def pcode = context.expand('${#TestCase#Product_Code}').toInteger()
+
+def testSwitch(val) {
+    def result
+    switch (val) {
+	       case 2230..2239:
+            result = 'COBRA_SCD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '10003013' )
+            break
+		  case 2240..2241:
+            result = 'COBRA_SCD4X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '80003001' )
+            break
+            case 2250..2255:
+            result = 'COBRA_SCD5X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '10003018' )
+            break
+   	       case 2330..2335:
+            result = 'COBRA_WSD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '50003014' )
+            break
+            case 2430..2435:
+            result = 'COBRA_MCD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '70003011' )
+            break
+   	       case 2030..2037:
+            result = 'COBRA_OBD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '10003017' )
+            break
+
+    }   
+    result
+}
+
+
+def start = context.expand('${#TestCase#Start}').toInteger()
 def end = context.expand('${#TestCase#End}').toInteger()
+testRunner.testCase.setPropertyValue( "Product_Type", testSwitch(pcode) )
 
 
 if (start > end) {
@@ -284,12 +320,12 @@ while (start &lt;= end) {
 
 	log.info(start.toString().padLeft(5,'0'))
 	testRunner.testCase.setPropertyValue( "Value", start.toString().padLeft(5,'0') )
-	testRunner.runTestStepByName( "action - MCD3X")
+	testRunner.runTestStepByName( "action - devicePreload")
 	start++
 }
 
 log.info ("Upload Finished")
-</script></con:config></con:testStep><con:testStep type="request" id="17489cdb-6e20-4232-ab8f-a0007a9547d7" name="action - MCD3X" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CreateDevicePreloadedImplServiceSoapBinding</con:interface><con:operation>action</con:operation><con:request name="action - MCD3X" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="64d91661-ecef-4ff3-98d0-c7874bc9e702"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+</script></con:config></con:testStep><con:testStep type="request" id="17489cdb-6e20-4232-ab8f-a0007a9547d7" name="action - devicePreload" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CreateDevicePreloadedImplServiceSoapBinding</con:interface><con:operation>action</con:operation><con:request name="action - devicePreload" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="64d91661-ecef-4ff3-98d0-c7874bc9e702"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
    <soapenv:Header/>
    <soapenv:Body>
       <ser:action>
@@ -304,9 +340,14 @@ log.info ("Upload Finished")
          <!--Optional:-->
          <dpInfo>
             <!--Zero or more repetitions:-->
-            <params><name>AUTHENTICATION_KEY</name><value>WPbPceS7baBPC6Z3GNSEA9w0CVGrT14/w/8FvrtzP94M64r7ggg8OjFqZrqc+KXZSJyNFHG7UQXyEBrmoY3BQXjQ/0839ntusHm7hrpalce6PkjxR4bT4cstXspaabOsernpHndoPBJYlR8rxzPYq7eP+eiaU8e1qiieRYgE2Uax576AsdUiRvpS9RqS9gxHhqgWjqz0yNOEj1oXoVReswwuU90Fxq2bd2U4+aeAcqnDxQV3+vIJzErVm5/G0UvUVkOGgB2Ie0+e5+jShW8iK+zI3L7s1pSmN2BJxoHA897WwDDuwkl3xXr+dMDfgew85kHJWZyg/s77V6JSxLqOONjaKIbURJBw4m4a33im3bkGGIAvRFAfWYH/VnyO4pJrQxOF+ZnAiInawcIRJQcD8DC8xC85qOUPDZO9Gq9aPwAXhewIgnGwSaHhApylYxJH+bbL073ssLbiFum9VbN5lKQqq6Ot1wOM3SXN2EU5kqQiqd+aoiDuAP/K43xxMd+E</value></params><params><name>FACTORY_PROFILE_ID</name><value>70003011</value></params><params><name>SIM_CARD_ID</name><value>893910410000000${#TestCase#Value}</value></params><params><name>IMSI</name><value>2229000000${#TestCase#Value}</value></params><params><name>CALL_NUMBER</name><value>+3900${#TestCase#Value}</value></params><params><name>IMEI</name><value>0000000000${#TestCase#Value}</value></params><params>
+            <params><name>AUTHENTICATION_KEY</name><value>WPbPceS7baBPC6Z3GNSEA9w0CVGrT14/w/8FvrtzP94M64r7ggg8OjFqZrqc+KXZSJyNFHG7UQXyEBrmoY3BQXjQ/0839ntusHm7hrpalce6PkjxR4bT4cstXspaabOsernpHndoPBJYlR8rxzPYq7eP+eiaU8e1qiieRYgE2Uax576AsdUiRvpS9RqS9gxHhqgWjqz0yNOEj1oXoVReswwuU90Fxq2bd2U4+aeAcqnDxQV3+vIJzErVm5/G0UvUVkOGgB2Ie0+e5+jShW8iK+zI3L7s1pSmN2BJxoHA897WwDDuwkl3xXr+dMDfgew85kHJWZyg/s77V6JSxLqOONjaKIbURJBw4m4a33im3bkGGIAvRFAfWYH/VnyO4pJrQxOF+ZnAiInawcIRJQcD8DC8xC85qOUPDZO9Gq9aPwAXhewIgnGwSaHhApylYxJH+bbL073ssLbiFum9VbN5lKQqq6Ot1wOM3SXN2EU5kqQiqd+aoiDuAP/K43xxMd+E</value></params>
+            <params><name>FACTORY_PROFILE_ID</name><value>${#TestCase#Fact_Prof_ID}</value></params>
+            <params><name>SIM_CARD_ID</name><value>893910410000000${#TestCase#Value}</value></params>
+            <params><name>IMSI</name><value>2229000000${#TestCase#Value}</value></params>
+            <params><name>CALL_NUMBER</name><value>+3900${#TestCase#Value}</value></params>
+            <params><name>IMEI</name><value>0000000000${#TestCase#Value}</value></params><params>
                <name>PRODUCT_TYPE_CODE</name>
-               <value>${#TestCase#Product}</value>
+               <value>${#TestCase#Product_Type}</value>
             </params>
             <params>
                <name>SERIAL_NUMBER</name>
@@ -314,7 +355,7 @@ log.info ("Upload Finished")
             </params>
             <params>
                <name>PRODUCT_CODE</name>
-               <value>2431</value>
+               <value>${#TestCase#Product_Code}</value>
             </params>
             <params>
                <name>FIRMWARE_RELEASE</name>
@@ -327,9 +368,58 @@ log.info ("Upload Finished")
          </dpInfo>
       </ser:action>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3e0aa2ea-e8f5-41a4-b00d-e1da11a3ee9d" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Start</con:name><con:value>599</con:value></con:property><con:property><con:name>End</con:name><con:value>600</con:value></con:property><con:property><con:name>Value</con:name><con:value>00600</con:value></con:property><con:property><con:name>Product</con:name><con:value>COBRA_MCD3X</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>52afedff-2d72-408c-a221-770dbd3d21d1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="0ddf2ddf-ae74-4a3d-b429-c91006a7dcfc" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Dynamic Uploader" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="jdbc" name="JDBC Request" id="55af41ff-feb4-4b0b-a6af-537b7651f68f"><con:settings><con:setting id="prettyPrintResponse">true</con:setting></con:settings><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties/></con:config></con:testStep><con:testStep type="restrequest" name="Warning_Mail" id="bdc44c4c-66e7-4010-a3cf-28b6efb19cc7"><con:settings/><con:config service="https://maker.ifttt.com" resourcePath="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" methodName="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Warning_Mail" id="291759a1-5317-46e1-8abb-1b425c8d3916" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"${#TestCase#Product}","value2":"${#TestCase#Start}","value3":"${#TestCase#End}"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="massiveupload" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="a8cf657d-ba74-4f06-9ad5-bd31f2d52c35"><con:settings/><con:config><script>def start = context.expand('${#TestCase#Start}').toInteger()
-def end = context.expand('${#TestCase#End}').toInteger()
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3e0aa2ea-e8f5-41a4-b00d-e1da11a3ee9d" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Product_Code</con:name><con:value>2241</con:value></con:property><con:property><con:name>Start</con:name><con:value>606</con:value></con:property><con:property><con:name>End</con:name><con:value>607</con:value></con:property><con:property><con:name>----Start and End are INPUT</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property><con:property><con:name>Value</con:name><con:value>00607</con:value></con:property><con:property><con:name>Product_Type</con:name><con:value>COBRA_SCD4X</con:value></con:property><con:property><con:name>Fact_Prof_ID</con:name><con:value>80003001</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>52afedff-2d72-408c-a221-770dbd3d21d1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="0ddf2ddf-ae74-4a3d-b429-c91006a7dcfc" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Dynamic Uploader" searchProperties="true" timeout="0" maxResults="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="jdbc" name="JDBC Request" id="55af41ff-feb4-4b0b-a6af-537b7651f68f"><con:settings><con:setting id="prettyPrintResponse">true</con:setting></con:settings><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dbConnectionName>ITE_SVR</con:dbConnectionName><con:driver>oracle.jdbc.driver.OracleDriver</con:driver><con:connectionString>jdbc:oracle:thin:nexoadm/PASS_VALUE@127.0.0.1:1524:EURDEMDV</con:connectionString><con:password>salvador</con:password><con:query>SELECT dvp_serial_number
+FROM DEVICE_PRELOADED 
+where dvp_serial_number IN 
+	(
+select max (dvp_serial_number) 
+	FROM DEVICE_PRELOADED 
+	where DVP_SERIAL_NUMBER 
+	LIKE :name )</con:query><con:properties><con:property><con:name>name</con:name><con:value>%VIRTUA%</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="PropertyTransfer 1" id="cdff32aa-3632-44ee-bcaf-c9a2d673a080"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" transferChildNodes="false"><con:name>DVP_SERIAL_NUMBER</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>JDBC Request</con:sourceStep><con:sourcePath>//Results[1]/ResultSet[1]/Row[1]/DVP_SERIAL_NUMBER[1]</con:sourcePath><con:targetType>LastN</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:targetPath/><con:type>XPATH</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Warning_Mail" id="bdc44c4c-66e7-4010-a3cf-28b6efb19cc7"><con:settings/><con:config service="https://maker.ifttt.com" resourcePath="/trigger/{event}/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" methodName="Hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Warning_Mail" id="291759a1-5317-46e1-8abb-1b425c8d3916" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://maker.ifttt.com</con:endpoint><con:request>{"value1":"${#TestCase#Product_Type}","value2":"${#TestCase#Start}","value3":"${#TestCase#End}"}</con:request><con:originalUri>https://maker.ifttt.com/trigger/mail/with/key/hn-T84ivSQk5NOKD0iJ8WjlGC6SpoffgHHkvN0Z7j3d</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="event" value="massiveupload" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>event</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="a8cf657d-ba74-4f06-9ad5-bd31f2d52c35"><con:settings/><con:config><script>def pcode = context.expand('${#TestCase#Product_Code}').toInteger()
 
+def testSwitch(val) {
+    def result
+    switch (val) {
+	       case 2230..2239:
+            result = 'COBRA_SCD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '10003013' )
+            break
+		  case 2240..2241:
+            result = 'COBRA_SCD4X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '80003001' )
+            break
+            case 2250..2255:
+            result = 'COBRA_SCD5X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '10003018' )
+            break
+   	       case 2330..2335:
+            result = 'COBRA_WSD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '50003014' )
+            break
+            case 2430..2435:
+            result = 'COBRA_MCD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '70003011' )
+            break
+   	       case 2030..2037:
+            result = 'COBRA_OBD3X'
+            testRunner.testCase.setPropertyValue( "Fact_Prof_ID", '10003017' )
+            break
+
+    }   
+    result
+}
+
+
+
+
+
+def TrailedStart = ( context.expand('${#TestCase#LastN}') - 'VIRTUA' )
+def start = TrailedStart.toInteger()
+def end = start + context.expand('${#TestCase#NumberOfDev}').toInteger()
+
+testRunner.testCase.setPropertyValue( "Start", start.toString() )
+testRunner.testCase.setPropertyValue( "End", end.toString() )
+testRunner.testCase.setPropertyValue( "Product_Type", testSwitch(pcode) )
 
 if (start > end) {
 	testRunner.cancel("Start is greater than End")
@@ -340,12 +430,12 @@ while (start &lt;= end) {
 
 	log.info(start.toString().padLeft(5,'0'))
 	testRunner.testCase.setPropertyValue( "Value", start.toString().padLeft(5,'0') )
-	testRunner.runTestStepByName( "action - MCD3X")
+	testRunner.runTestStepByName( "action - devicePreload")
 	start++
 }
 
 log.info ("Upload Finished")
-</script></con:config></con:testStep><con:testStep type="request" id="7803d22b-9547-4891-a7ea-a4efef2e90a2" name="action - MCD3X" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CreateDevicePreloadedImplServiceSoapBinding</con:interface><con:operation>action</con:operation><con:request name="action - MCD3X" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="64d91661-ecef-4ff3-98d0-c7874bc9e702"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
+</script></con:config></con:testStep><con:testStep type="request" id="7803d22b-9547-4891-a7ea-a4efef2e90a2" name="action - devicePreload" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CreateDevicePreloadedImplServiceSoapBinding</con:interface><con:operation>action</con:operation><con:request name="action - devicePreload" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="64d91661-ecef-4ff3-98d0-c7874bc9e702"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://ite.cobratelematics.com/ws2/device/createDevicePreloaded</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://ws.ctd.com/service">
    <soapenv:Header/>
    <soapenv:Body>
       <ser:action>
@@ -360,9 +450,9 @@ log.info ("Upload Finished")
          <!--Optional:-->
          <dpInfo>
             <!--Zero or more repetitions:-->
-            <params><name>AUTHENTICATION_KEY</name><value>WPbPceS7baBPC6Z3GNSEA9w0CVGrT14/w/8FvrtzP94M64r7ggg8OjFqZrqc+KXZSJyNFHG7UQXyEBrmoY3BQXjQ/0839ntusHm7hrpalce6PkjxR4bT4cstXspaabOsernpHndoPBJYlR8rxzPYq7eP+eiaU8e1qiieRYgE2Uax576AsdUiRvpS9RqS9gxHhqgWjqz0yNOEj1oXoVReswwuU90Fxq2bd2U4+aeAcqnDxQV3+vIJzErVm5/G0UvUVkOGgB2Ie0+e5+jShW8iK+zI3L7s1pSmN2BJxoHA897WwDDuwkl3xXr+dMDfgew85kHJWZyg/s77V6JSxLqOONjaKIbURJBw4m4a33im3bkGGIAvRFAfWYH/VnyO4pJrQxOF+ZnAiInawcIRJQcD8DC8xC85qOUPDZO9Gq9aPwAXhewIgnGwSaHhApylYxJH+bbL073ssLbiFum9VbN5lKQqq6Ot1wOM3SXN2EU5kqQiqd+aoiDuAP/K43xxMd+E</value></params><params><name>FACTORY_PROFILE_ID</name><value>70003011</value></params><params><name>SIM_CARD_ID</name><value>893910410000000${#TestCase#Value}</value></params><params><name>IMSI</name><value>2229000000${#TestCase#Value}</value></params><params><name>CALL_NUMBER</name><value>+3900${#TestCase#Value}</value></params><params><name>IMEI</name><value>0000000000${#TestCase#Value}</value></params><params>
+            <params><name>AUTHENTICATION_KEY</name><value>WPbPceS7baBPC6Z3GNSEA9w0CVGrT14/w/8FvrtzP94M64r7ggg8OjFqZrqc+KXZSJyNFHG7UQXyEBrmoY3BQXjQ/0839ntusHm7hrpalce6PkjxR4bT4cstXspaabOsernpHndoPBJYlR8rxzPYq7eP+eiaU8e1qiieRYgE2Uax576AsdUiRvpS9RqS9gxHhqgWjqz0yNOEj1oXoVReswwuU90Fxq2bd2U4+aeAcqnDxQV3+vIJzErVm5/G0UvUVkOGgB2Ie0+e5+jShW8iK+zI3L7s1pSmN2BJxoHA897WwDDuwkl3xXr+dMDfgew85kHJWZyg/s77V6JSxLqOONjaKIbURJBw4m4a33im3bkGGIAvRFAfWYH/VnyO4pJrQxOF+ZnAiInawcIRJQcD8DC8xC85qOUPDZO9Gq9aPwAXhewIgnGwSaHhApylYxJH+bbL073ssLbiFum9VbN5lKQqq6Ot1wOM3SXN2EU5kqQiqd+aoiDuAP/K43xxMd+E</value></params><params><name>FACTORY_PROFILE_ID</name><value>${#TestCase#Fact_Prof_ID}</value></params><params><name>SIM_CARD_ID</name><value>893910410000000${#TestCase#Value}</value></params><params><name>IMSI</name><value>2229000000${#TestCase#Value}</value></params><params><name>CALL_NUMBER</name><value>+3900${#TestCase#Value}</value></params><params><name>IMEI</name><value>0000000000${#TestCase#Value}</value></params><params>
                <name>PRODUCT_TYPE_CODE</name>
-               <value>${#TestCase#Product}</value>
+               <value>${#TestCase#Product_Type}</value>
             </params>
             <params>
                <name>SERIAL_NUMBER</name>
@@ -370,7 +460,7 @@ log.info ("Upload Finished")
             </params>
             <params>
                <name>PRODUCT_CODE</name>
-               <value>2431</value>
+               <value>${#TestCase#Product_Code}</value>
             </params>
             <params>
                <name>FIRMWARE_RELEASE</name>
@@ -378,9 +468,9 @@ log.info ("Upload Finished")
             </params>
             <params>
                <name>PRODUCTION_DATE</name>
-               <value>2016-06-07</value>
+               <value>2017-09-18</value>
             </params>
          </dpInfo>
       </ser:action>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3e0aa2ea-e8f5-41a4-b00d-e1da11a3ee9d" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Start</con:name><con:value>599</con:value></con:property><con:property><con:name>End</con:name><con:value>600</con:value></con:property><con:property><con:name>Value</con:name><con:value>00600</con:value></con:property><con:property><con:name>Product</con:name><con:value>COBRA_MCD3X</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>52afedff-2d72-408c-a221-770dbd3d21d1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:tags/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3e0aa2ea-e8f5-41a4-b00d-e1da11a3ee9d" name="SOAP Response"/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://ws.ctd.com/service/CreateDevicePreloaded/action"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Product_Code</con:name><con:value>2330</con:value></con:property><con:property><con:name>NumberOfDev</con:name><con:value>1</con:value></con:property><con:property><con:name>---Input the how many device you want to create</con:name><con:value/></con:property><con:property><con:name>Value</con:name><con:value>00601</con:value></con:property><con:property><con:name>Product_Type</con:name><con:value>COBRA_WSD3X</con:value></con:property><con:property><con:name>LastN</con:name><con:value>00600VIRTUA</con:value></con:property><con:property><con:name>Start</con:name><con:value>600</con:value></con:property><con:property><con:name>End</con:name><con:value>601</con:value></con:property><con:property><con:name>Fact_Prof_ID</con:name><con:value>50003014</con:value></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>52afedff-2d72-408c-a221-770dbd3d21d1</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer><con:databaseConnection><con:name>ITE_SVR</con:name><con:driver>oracle.jdbc.driver.OracleDriver</con:driver><con:connectionString>jdbc:oracle:thin:nexoadm/PASS_VALUE@127.0.0.1:1524:EURDEMDV</con:connectionString><con:password>salvador</con:password></con:databaseConnection></con:databaseConnectionContainer><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:authRepository/><con:tags/></con:soapui-project>
